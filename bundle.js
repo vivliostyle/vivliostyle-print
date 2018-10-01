@@ -897,7 +897,7 @@
 	        css = document.getElementById('css').value,
 	        htmlDoc = "\n        <!doctype html>\n        <html>\n            <head><style>" + css + "</style><head>\n            <body>" + html + "</body>\n        </html>",
 	        title = 'Vivliostyle-print demo',
-	        resourcesUrl = '/resources/';
+	        resourcesUrl = 'resources/';
 
 	    vivliostylePrint(htmlDoc, title, resourcesUrl);
 	});

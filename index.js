@@ -11,7 +11,7 @@ document.getElementById('print').addEventListener('click', () => {
             <body>${html}</body>
         </html>`,
         title = 'Vivliostyle-print demo',
-        resourcesUrl = '/resources/'
+        resourcesUrl = 'resources/'
 
     vivliostylePrint(htmlDoc, title, resourcesUrl)
 })
