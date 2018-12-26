@@ -850,7 +850,7 @@
 	    }
 	    this.window = window;
 	    this.window.printInstance = this;
-	    this.iframe.srcdoc="<html><head><style id='vivliostyle-page-rules'></style></head><body onload='parent.printInstance.runInIframe(window)'></body></html>";
+	    this.iframe.srcdoc="<!DOCTYPE html>\n        <html data-vivliostyle-paginated=\"true\">\n            <head>\n                <meta charset='utf-8'/>\n                <meta name='viewport' content='width=device-width, initial-scale=1.0'/>\n                <link rel=\"stylesheet\" href=\"" + (this.resourcesUrl) + "vivliostyle-viewport-screen.css\" media=\"screen\"/>\n                <link rel=\"stylesheet\" href=\"" + (this.resourcesUrl) + "vivliostyle-viewport.css\"/>\n                <style>\n                    html[data-vivliostyle-paginated],\n                    html[data-vivliostyle-paginated] body,\n                    html[data-vivliostyle-paginated] [data-vivliostyle-viewer-viewport] {\n                        width: 100% !important;\n                        height: 100% !important;\n                    }\n                </style>\n                <style id='vivliostyle-page-rules'></style>\n            </head>\n            <body onload='parent.printInstance.runInIframe(window)'>\n                <div id=\"vivliostyle-viewer-viewport\"></div>\n            </body>\n        </html>";
 	    document.body.appendChild(this.iframe);
 	};
 
@@ -859,8 +859,6 @@
 
 	    this.iframeWin = iframeWin;
 	    return this.preparePrint().then(
-	        function () { return this$1.fixPreparePrint(); }
-	    ).then(
 	        function () { return this$1.browserPrint(); }
 	    ).then(
 	        function () { return this$1.cleanUp(); }
@@ -873,7 +871,7 @@
 	        docURL = URL.createObjectURL(docBlob),
 	        Viewer = new vivliostyle_min.viewer.Viewer(
 	            {
-	                viewportElement: this.iframeWin.document.body,
+	                viewportElement: this.iframeWin.document.body.firstElementChild,
 	                window: this.iframeWin,
 	                userAgentRootURL: ("" + (this.resourcesUrl))
 	            }
@@ -886,10 +884,6 @@
 	        });
 	        Viewer.loadDocument({url: docURL});
 	    })
-	};
-
-	VivliostylePrint.prototype.fixPreparePrint = function () {
-	    this.iframeWin.document.querySelectorAll('[data-vivliostyle-page-container]').forEach(function (node) { return node.style.display = 'block'; });
 	};
 
 	VivliostylePrint.prototype.browserPrint = function () {
@@ -913,7 +907,7 @@
 	        css = document.getElementById('css').value,
 	        htmlDoc = "\n        <!doctype html>\n        <html>\n            <head><style>" + css + "</style><head>\n            <body>" + html + "</body>\n        </html>",
 	        title = 'Vivliostyle-print demo',
-	        resourcesUrl = 'resources/',
+	        resourcesUrl = '/demo/resources/',
 	        printCallback = function (iframeWin) {
 	            var pageCount = iframeWin.document.querySelectorAll('[data-vivliostyle-page-container]').length;
 	            console.log(("page count: " + pageCount));
