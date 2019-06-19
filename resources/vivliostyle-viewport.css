@@ -47,6 +47,10 @@
     box-sizing: border-box;
 }
 
+[data-vivliostyle-page-box] ~ [data-vivliostyle-page-box] {
+    display: none;
+}
+
 [data-vivliostyle-toc-box] {
     position: absolute;
     left: 3px;
@@ -68,7 +72,7 @@
         height: 100% !important;
     }
 
-    [data-vivliostyle-spread-container] {
+    [data-vivliostyle-spread-container], [data-vivliostyle-page-container] {
         -moz-transform: none !important;
         -ms-transform: none !important;
         -webkit-transform: none !important;
@@ -83,9 +87,15 @@
     }
 
     /* Workaround for Chrome printing problem */
-    [data-vivliostyle-page-box] {
+    /* [data-vivliostyle-page-box] {
         padding-bottom: 0 !important;
         overflow: visible !important;
+    } */
+    [data-vivliostyle-bleed-box] > div > div::before {
+        display: block;
+        content: "";
+        padding-top: 0.015625px;
+        margin-bottom: -0.015625px;
     }
 
     /* Gecko-only hack, see https://bugzilla.mozilla.org/show_bug.cgi?id=267029#c17 */
