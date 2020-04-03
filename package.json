@@ -19,6 +19,9 @@
         "type": "git",
         "url": "git+https://github.com/vivliostyle/vivliostyle-print.git"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "keywords": [
         "print",
         "vivliostyle",
