@@ -34,7 +34,7 @@ export default [
                 include: "**/*.css",
             }),
             nodeResolve({
-                mainFields: ['browser', 'main']
+                mainFields: ['main', 'browser']
             }),
             sourcemaps(),
             commonJS({
