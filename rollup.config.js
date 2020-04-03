@@ -33,9 +33,7 @@ export default [
             string({
                 include: "**/*.css",
             }),
-            nodeResolve({
-                mainFields: ['main', 'browser']
-            }),
+            nodeResolve(),
             sourcemaps(),
             commonJS({
                 include: '../**',
@@ -62,9 +60,7 @@ export default [
             string({
                 include: "**/*.css",
             }),
-            nodeResolve({
-                mainFields: ['module', 'browser', 'main']
-            }),
+            nodeResolve(),
             sourcemaps(),
             commonJS({
                 include: '../**',
