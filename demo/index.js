@@ -1,5 +1,5 @@
 import {
-    vivliostylePrint
+    printHTML
 } from "../src"
 
 
@@ -22,7 +22,7 @@ document.getElementById('print').addEventListener('click', () => {
             iframeWin.print()
         }
 
-    vivliostylePrint(htmlDoc, {
+    printHTML(htmlDoc, {
         title,
         printCallback,
         hideIframe: true, // Whether to use a hidden iframe (default: true)
