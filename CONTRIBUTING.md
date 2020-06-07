@@ -1,1 +1,1 @@
-To get started, <a href="https://www.clahub.com/agreements/vivliostyle/vivliostyle-print">sign the Contributor License Agreement</a>.
+To get started, <a href="https://cla-assistant.io/vivliostyle/">sign the Contributor License Agreement</a>.
