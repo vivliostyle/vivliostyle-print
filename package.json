@@ -1,6 +1,6 @@
 {
     "name": "@vivliostyle/print",
-    "version": "2.1.4",
+    "version": "2.3.0",
     "description": "Allows page-layouting using the vivliostyle for printing within a website without destroying the original layout",
     "main": "dist/index.cjs.js",
     "jsnext:main": "dist/index.es6.js",
@@ -36,7 +36,7 @@
     "homepage": "https://github.com/vivliostyle/vivliostyle-print#readme",
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@vivliostyle/core": "^2.1.4",
+        "@vivliostyle/core": "^2.3.0",
         "eslint": "^6.8.0",
         "gh-pages": "^2.2.0",
         "rollup": "^2.3.2",
