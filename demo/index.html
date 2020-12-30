@@ -61,6 +61,7 @@ html {
     -webkit-hyphens: auto;
     hyphens: auto;
     counter-reset: footnote;
+    line-height: 2;
 }
 
 h1 {
@@ -79,7 +80,7 @@ h2 {
     font-weight: bold;
     font-size: 12pt;
     text-indent: 0;
-
+    string-set: section content();
     break-after: avoid;
 }
 
@@ -113,6 +114,13 @@ figcaption {
         content: env(doc-title);
     }
 }
+
+@page:right {
+    @top-center {
+        content: string(section);
+    }
+}
+
 .footnote {
     float: footnote;
     font-size: 8pt;
