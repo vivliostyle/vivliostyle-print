@@ -11,6 +11,7 @@ document.getElementById('print').addEventListener('click', () => {
         <!doctype html>
         <html>
             <head>
+                <meta charset="UTF-8">
                 <title>${title}</title>
                 <style>${css}</style>
             <head>
