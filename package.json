@@ -36,7 +36,7 @@
     "homepage": "https://github.com/vivliostyle/vivliostyle-print#readme",
     "devDependencies": {
         "@babel/core": "^7.12.13",
-        "@vivliostyle/core": "^2.15.6",
+        "@vivliostyle/core": "^2.15.7",
         "eslint": "^7.19.0",
         "gh-pages": "^3.1.0",
         "rollup": "^2.38.5",
