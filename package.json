@@ -7,9 +7,9 @@
     "module": "dist/index.es6.js",
     "scripts": {
         "prebuild": "npm run lint",
-        "build": "rollup -c",
+        "build": "esbuild src/index.js --bundle --outfile=dist/index.cjs.js --format=cjs --minify --sourcemap && esbuild src/index.js --bundle --outfile=dist/index.es6.js --format=esm --minify --sourcemap",
         "prepublishOnly": "npm run build",
-        "build_demo": "rollup -c rollup.demo.config.js",
+        "build_demo": "esbuild demo/index.js --bundle --outfile=demo/bundle.js --format=iife --minify --sourcemap",
         "prepare": "npm run build",
         "lint": "eslint src/*",
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,17 +35,9 @@
     },
     "homepage": "https://github.com/vivliostyle/vivliostyle-print#readme",
     "devDependencies": {
-        "@babel/core": "^7.12.13",
         "@vivliostyle/core": "^2.30.5",
+        "esbuild": "^0.24.0",
         "eslint": "^7.19.0",
-        "gh-pages": "^6.2.0",
-        "rollup": "^2.38.5",
-        "rollup-plugin-babel": "^4.4.0",
-        "rollup-plugin-commonjs": "^10.1.0",
-        "rollup-plugin-node-resolve": "^5.2.0",
-        "rollup-plugin-sourcemaps": "^0.6.3",
-        "rollup-plugin-string": "^3.0.0",
-        "rollup-plugin-strip": "^1.2.2",
-        "rollup-plugin-terser": "^7.0.2"
+        "gh-pages": "^6.2.0"
     }
 }
