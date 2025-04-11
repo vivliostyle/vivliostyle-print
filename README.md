@@ -79,7 +79,7 @@ one of the functions of Vivliostyle that does not allow the sharing of complex d
 structures between surrounding code and Vivliostyle, which is the most important
 requirements to follow when using VIvliostyle in combination with a non-open source
 project. For more information cocnerning the license, read
-[this](https://vivliostyle.org/faq/#Vivliostyle%20License%20FAQ).
+[this](https://vivliostyle.org/faq/#vivliostyle-license-faq).
 
 Please report any bugs and open pull requests on the
 [Vivliostyle main repo](https://github.com/vivliostyle/vivliostyle.js).
