@@ -35,7 +35,7 @@
     },
     "homepage": "https://github.com/vivliostyle/vivliostyle-print#readme",
     "devDependencies": {
-        "@vivliostyle/core": "^2.39.1",
+        "@vivliostyle/core": "^2.40.0",
         "esbuild": "^0.24.0",
         "eslint": "^7.19.0",
         "gh-pages": "^6.2.0"
