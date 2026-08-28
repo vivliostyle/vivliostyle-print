@@ -5,6 +5,7 @@
     "main": "dist/index.cjs.js",
     "jsnext:main": "dist/index.es6.js",
     "module": "dist/index.es6.js",
+    "types": "index.d.ts",
     "scripts": {
         "prebuild": "npm run lint",
         "build": "esbuild src/index.js --bundle --outfile=dist/index.cjs.js --format=cjs --minify --sourcemap && esbuild src/index.js --bundle --outfile=dist/index.es6.js --format=esm --minify --sourcemap",
