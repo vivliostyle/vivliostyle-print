@@ -77,8 +77,8 @@ On larger projects, it can be difficult to ensure that no developer is accidenta
 breaking the terms of the Vivliostyle AGPL license. Vivliostyle-print only exposes
 one of the functions of Vivliostyle that does not allow the sharing of complex data
 structures between surrounding code and Vivliostyle, which is the most important
-requirements to follow when using VIvliostyle in combination with a non-open source
-project. For more information cocnerning the license, read
+requirements to follow when using Vivliostyle in combination with a non-open source
+project. For more information concerning the license, read
 [this](https://vivliostyle.org/faq/#vivliostyle-license-faq).
 
 Please report any bugs and open pull requests on the
